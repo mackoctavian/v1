@@ -6,39 +6,41 @@ import { AuroraBackground } from "@/components/ui/aurora-background";
 import { TextHoverEffect } from "@/components/ui/text-hover-effect";
 import Logo from "./mack-white.png";
 import Image from "next/image";
+
 // import { useScroll, useTransform } from "framer-motion";
 
 // import { GoogleGeminiEffect } from "@/components/ui/google-gemini-effect";
 
 export default function Home() {
   return (
-    <main>
+    <main className="bg-black relative">
       <AuroraBackground>
-        <nav className="w-full bg-transparent top-0">
-          <ul className="flex items-center justify-between ">
+        <nav className="w-full bg-transparent  top-0 sticky ">
+          <ul className="flex items-center justify-between px-8 md:px-20 py-4">
             <li>
-              <Image src={Logo} height={40} width={40} alt="logo" />
+              <Image src={Logo} height={30} width={30} alt="logo" />
             </li>
-            <li className="hidden">Download</li>
+            <li className="text-white">Resume</li>
           </ul>
         </nav>
+        <div className="w-full h-screen flex flex-col items-center justify-center ">
+          <motion.div
+            initial={{ opacity: 0.0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{
+              delay: 0.3,
+              duration: 0.8,
+              ease: "easeInOut",
+            }}
+            className="relative flex flex-col gap-4 items-center justify-center px-4 w-full"
+          >
+            <TextHoverEffect text="MACK" />
+          </motion.div>
 
-        <motion.div
-          initial={{ opacity: 0.0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{
-            delay: 0.3,
-            duration: 0.8,
-            ease: "easeInOut",
-          }}
-          className="relative flex flex-col gap-4 items-center justify-center px-4 w-full"
-        >
-          <TextHoverEffect text="MACK" />
-        </motion.div>
-        {/* <span className="text-2xl font-bold text-white">Mack Octavian</span> */}
-        <span className="text-medium font-semibold text-neutral-400 py-4">
-          Brings Ideas to life with code
-        </span>
+          <span className="text-lg font-semibold text-neutral-400 py-4">
+            BRINGS IDEAS TO LIFE WITH CODE
+          </span>
+        </div>
       </AuroraBackground>
     </main>
   );
