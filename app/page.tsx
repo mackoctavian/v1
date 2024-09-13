@@ -37,7 +37,7 @@ export default function Home() {
             <TextHoverEffect text="MACK" />
           </motion.div>
 
-          <span className="text-lg font-semibold text-neutral-400 py-4">
+          <span className="md:text-medium font-semibold text-neutral-400 py-4">
             BRINGS IDEAS TO LIFE WITH CODE
           </span>
         </div>
