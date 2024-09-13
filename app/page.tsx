@@ -20,7 +20,11 @@ export default function Home() {
             <li>
               <Image src={Logo} height={30} width={30} alt="logo" />
             </li>
-            <li className="text-white">Resume</li>
+            <li className="text-white">
+              <button className="hidden px-4 py-2 rounded-lg border border-black bg-neutral-400 text-black text-sm hover:shadow-[4px_4px_0px_0px_rgba(0,0,0)] transition duration-200">
+                Resume
+              </button>
+            </li>
           </ul>
         </nav>
         <div className="w-full h-screen flex flex-col items-center justify-center ">
@@ -37,7 +41,7 @@ export default function Home() {
             <TextHoverEffect text="MACK" />
           </motion.div>
 
-          <span className="md:text-medium font-semibold text-neutral-400 py-4">
+          <span className="hidden md:text-medium font-semibold text-neutral-400 py-4">
             BRINGS IDEAS TO LIFE WITH CODE
           </span>
         </div>
